@@ -19,6 +19,7 @@ import {
 
 import Link from 'next/link';
 import { Pagination } from '../../components';
+import Layout from '../../components/Layout';
 
 const TABS = [
   {
@@ -78,7 +79,7 @@ const ProductsList = () => {
   };
 
   return (
-    <>
+    <Layout>
       <Card className="h-full px-2 sm:px-5  shadow-none border-none w-full bg-transparent">
         <CardHeader
           floated={false}
@@ -307,7 +308,7 @@ const ProductsList = () => {
         </CardBody>
         <Pagination />
       </Card>
-    </>
+    </Layout>
   );
 };
 
