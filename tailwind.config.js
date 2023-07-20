@@ -1,18 +1,42 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+import withMT from '@material-tailwind/react/utils/withMT';
+
+export default withMT({
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+    ,
+    './components/**/*.{js,ts,jsx,tsx}',
+
+    'path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}',
+    'path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'main-bg': '#F5F7F8',
+        muted: '#797A7A',
+        primary: '#1766E2',
+        'soft-gray': '#F1F2F4',
+
+        'neutral-400': '#A5A4A1',
+        'neutral-600': '#7D7C78',
+        'neutral-900': '#37352F',
+        'zing-800': '#22262D',
+        'border-main': '#E9E8EB',
+        'border-subdued': '#EEE',
+      },
+      fontSize: {
+        '13px': [
+          '0.975em',
+          {
+            lineHeight: '1.1',
+            letterSpacing: '-0.02em',
+            fontWeight: '500',
+          },
+        ],
       },
     },
   },
   plugins: [],
-}
+});
