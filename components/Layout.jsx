@@ -1,14 +1,15 @@
+'use client';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 
-import MobileSidebar from '../Header/MobileSidebar';
-import NotifationList from '../Header/NotifationList';
-import UserProfile from '../Header/ProfileMenu';
-import MainSidebar from '../Sidebar/MainSidebar';
 import { useState } from 'react';
 import { FiHelpCircle } from 'react-icons/fi';
 import { LuSearch } from 'react-icons/lu';
 
 import { Logo } from './ui';
+import NotifationList from './Header/NotifationList';
+import UserProfile from './Header/ProfileMenu';
+import MainSidebar from './Sidebar/MainSidebar';
+import MobileSidebar from './Header/MobileSidebar';
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);

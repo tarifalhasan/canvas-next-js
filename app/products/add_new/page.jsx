@@ -17,6 +17,7 @@ import {
 
 import { Button } from '@material-tailwind/react';
 import dynamic from 'next/dynamic';
+import Layout from '../../../components/Layout';
 
 const AddNewProduct = () => {
   const [products, setProducts] = useState([]);
@@ -126,7 +127,7 @@ const AddNewProduct = () => {
 
   console.log(products, 'tarif');
   return (
-    <>
+    <Layout>
       <form onSubmit={handleAddProduct} className=" pb-5 px-2 sm:px-5 ">
         <div className=" space-y-3 py-5 sm:py-8">
           <Link
@@ -205,7 +206,7 @@ const AddNewProduct = () => {
           </div>
         </div>
       </form>
-    </>
+    </Layout>
   );
 };
 
