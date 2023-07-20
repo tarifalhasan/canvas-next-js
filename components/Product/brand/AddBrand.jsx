@@ -1,8 +1,8 @@
 import React, { useState, ChangeEvent } from 'react';
 
 export default function Brand() {
-  const [selectedBrand, setSelectedBrand] = useState < string > '';
-  const [customBrand, setCustomBrand] = useState < string > '';
+  const [selectedBrand, setSelectedBrand] = useState('');
+  const [customBrand, setCustomBrand] = useState('');
 
   const handleBrandChange = event => {
     const selectedValue = event.target.value;

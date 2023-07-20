@@ -192,10 +192,12 @@ const AddNewProduct = () => {
             {/* ===**** Media Uploader ===*****/}
             <Uploader />
           </div>
-          <div className=" basis-[30%] ">
+          <div className=" space-y-4 basis-[30%] ">
             <div className="rounded-lg border bg-white border-border-subdued  p-5">
               {/* Status */}
               <Status />
+              <Brand />
+              <Category />
             </div>
             <div className=" grid grid-cols-2 gap-3">
               <button className=" input">Preview</button>
